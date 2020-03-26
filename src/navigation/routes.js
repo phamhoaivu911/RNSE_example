@@ -1,0 +1,4 @@
+export const FRIENDS_BOTTOM_TAB = 'FRIENDS_BOTTOM_TAB';
+export const FRIENDS_TOP_TAB = 'FRIENDS_TOP_TAB';
+export const FRIENDS_LIST = 'FRIENDS_LIST';
+export const FRIEND_DETAIL = 'FRIEND_DETAIL';
