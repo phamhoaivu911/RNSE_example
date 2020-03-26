@@ -1,5 +1,26 @@
 export default [
   {
+    name: 'Didier Brun',
+    email: 'didier.brun@gmail.com',
+    position: 'Accounting',
+    photo:
+      'http://pbs.twimg.com/profile_images/442752287241293824/mTsB6gg0.jpeg',
+  },
+  {
+    name: 'Katheryn Evans',
+    email: 'katheryn.evans@gmail.com',
+    position: 'Software Engineer',
+    photo:
+      'https://m.media-amazon.com/images/M/MV5BNTFmMjg2MTYtZjY4Ni00ZTQzLWI2OWMtNTA5NWQ0OGJhZWQ3XkEyXkFqcGdeQXVyMTE1MzA3MTI@._V1_UY256_CR106,0,172,256_AL_.jpg',
+  },
+  {
+    name: 'Marcia Gaudencio',
+    email: 'marcia.gaudencio@gmail.com',
+    position: 'Data Entry',
+    photo:
+      'http://pbs.twimg.com/profile_images/752461099807678464/DUhuoeI8.jpg',
+  },
+  {
     name: 'Masen Compton',
     email: 'masen.compton@gmail.com',
     position: 'Human Resources',
@@ -89,53 +110,5 @@ export default [
     position: 'Attorney',
     photo:
       'https://images-na.ssl-images-amazon.com/images/M/MV5BNjgzMzk2MjEzM15BMl5BanBnXkFtZTgwMTkzMDEwMTE@._V1_UX172_CR0,0,172,256_AL_.jpg',
-  },
-  {
-    name: 'Katheryn Evans',
-    email: 'katheryn.evans@gmail.com',
-    position: 'Software Engineer',
-    photo:
-      'https://m.media-amazon.com/images/M/MV5BNTFmMjg2MTYtZjY4Ni00ZTQzLWI2OWMtNTA5NWQ0OGJhZWQ3XkEyXkFqcGdeQXVyMTE1MzA3MTI@._V1_UY256_CR106,0,172,256_AL_.jpg',
-  },
-  {
-    name: 'Marcia Gaudencio',
-    email: 'marcia.gaudencio@gmail.com',
-    position: 'Data Entry',
-    photo:
-      'http://pbs.twimg.com/profile_images/752461099807678464/DUhuoeI8.jpg',
-  },
-  {
-    name: 'Didier Brun',
-    email: 'didier.brun@gmail.com',
-    position: 'Accounting',
-    photo:
-      'http://pbs.twimg.com/profile_images/442752287241293824/mTsB6gg0.jpeg',
-  },
-  {
-    name: 'Amber Heard',
-    email: 'amber.heard@gmail.com',
-    position: 'Accountant',
-    photo:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ0MjA1ODU0MV5BMl5BanBnXkFtZTgwNTczNTkwNjE@._V1_UY256_CR8,0,172,256_AL_.jpg',
-  },
-  {
-    name: 'Lucrecia Calder',
-    email: 'lucrecia.calder@gmail.com',
-    position: 'Attorney',
-    photo: 'https://randomuser.me/api/portraits/women/95.jpg',
-  },
-  {
-    name: 'Craig Chaney',
-    email: 'craig.chaney@gmail.com',
-    position: 'Attorney',
-    photo:
-      'https://images.unsplash.com/photo-1542345812-d98b5cd6cf98?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
-  },
-  {
-    name: 'Alejandra Stallings',
-    email: 'alejandra.stallings@gmail.com',
-    position: 'Customer Service Representative',
-    photo:
-      'https://images.unsplash.com/photo-1498597531364-5944cd5388f4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=154bbabc57d958ef985edbd93c1cd051',
   },
 ];

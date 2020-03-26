@@ -1,19 +1,19 @@
 import {createSharedElementStackNavigator} from 'react-navigation-shared-element';
 import React from 'react';
 
-import {FRIENDS_TOP_TAB, FRIEND_DETAIL} from '../routes';
-import FriendDetailScreen from '../../components/FriendDetailScreen';
-import TopTabScreen from './TopTabScreen';
+import {FRIENDS_LIST, FRIEND_DETAIL} from './routes';
+import FriendDetailScreen from '../components/FriendDetailScreen';
+import FriendsListScreen from '../components/FriendsListScreen';
 
 const Stack = createSharedElementStackNavigator();
 
-const TopTabStack = () => (
-  <Stack.Navigator
-    initialRouteName={FRIENDS_TOP_TAB}
-    screenOptions={{
-      headerShown: false,
-    }}>
-    <Stack.Screen name={FRIENDS_TOP_TAB} component={TopTabScreen} />
+const FriendsStack = () => (
+  <Stack.Navigator initialRouteName={FRIENDS_LIST}>
+    <Stack.Screen
+      name={FRIENDS_LIST}
+      component={FriendsListScreen}
+      options={{title: 'Friends'}}
+    />
     <Stack.Screen
       name={FRIEND_DETAIL}
       component={FriendDetailScreen}
@@ -23,6 +23,7 @@ const TopTabStack = () => (
         return [item.email];
       }}
       options={{
+        headerShown: false,
         cardStyleInterpolator: ({current: {progress}}) => ({
           cardStyle: {opacity: progress},
         }),
@@ -31,4 +32,4 @@ const TopTabStack = () => (
   </Stack.Navigator>
 );
 
-export default TopTabStack;
+export default FriendsStack;

@@ -2,7 +2,7 @@ import {Text, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 
-import {FRIENDS_BOTTOM_TAB, FRIENDS_TOP_TAB} from './routes';
+import {FRIENDS_BOTTOM_TAB, FRIENDS_LIST} from './routes';
 import FriendsStack from './FriendsStack';
 
 const isHomeRootScreen = route => {
@@ -12,17 +12,11 @@ const isHomeRootScreen = route => {
       : route.params?.screen) || FRIENDS_BOTTOM_TAB;
   return (
     currentScreenName === FRIENDS_BOTTOM_TAB ||
-    currentScreenName === FRIENDS_TOP_TAB
+    currentScreenName === FRIENDS_LIST
   );
 };
 
 const Tab = createBottomTabNavigator();
-
-const Home = () => (
-  <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-    <Text>Home</Text>
-  </View>
-);
 
 const Settings = () => (
   <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -32,13 +26,6 @@ const Settings = () => (
 
 const BottomTab = () => (
   <Tab.Navigator>
-    <Tab.Screen
-      name="HOME_BOTTOM_TAB"
-      component={Home}
-      options={{
-        tabBarLabel: 'Home',
-      }}
-    />
     <Tab.Screen
       name={FRIENDS_BOTTOM_TAB}
       component={FriendsStack}
