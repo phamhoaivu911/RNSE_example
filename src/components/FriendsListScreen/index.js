@@ -1,17 +1,13 @@
-import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, Image, TouchableOpacity, View} from 'react-native';
 import {SharedElement} from 'react-navigation-shared-element';
-import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 
 import {FRIEND_DETAIL} from '../../navigation/routes';
 import data from './data';
 
 const Item = item => {
-  const {navigate} = useNavigation();
   return (
-    <TouchableOpacity
-      onPress={() => navigate(FRIEND_DETAIL, {item})}
-      style={{padding: 15}}>
+    <TouchableOpacity onPress={item.onPress} style={{padding: 15}}>
       <SharedElement id={item.email}>
         <Image
           source={{uri: item.photo}}
@@ -32,12 +28,17 @@ const Row = ({rowData}) => {
   );
 };
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <FlatList
         data={data}
-        renderItem={({item}) => <Item {...item} />}
+        renderItem={({item}) => (
+          <Item
+            onPress={() => navigation.navigate(FRIEND_DETAIL, {item})}
+            {...item}
+          />
+        )}
         keyExtractor={({email}) => email}
       />
     </View>

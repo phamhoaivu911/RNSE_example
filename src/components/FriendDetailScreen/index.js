@@ -5,9 +5,9 @@ import React from 'react';
 
 const {width: deviceWidth} = Dimensions.get('window');
 
-const DetailScreen = ({route, navigation}) => {
+const DetailScreen = ({navigation}) => {
   const {top: topInsect} = useSafeArea();
-  const {item} = route.params;
+  const item = navigation.getParam('item');
   return (
     <View>
       <SharedElement id={item.email}>
@@ -37,6 +37,15 @@ const DetailScreen = ({route, navigation}) => {
       </TouchableOpacity>
     </View>
   );
+};
+
+DetailScreen.sharedElements = (navigation, otherNavigation, showing) => {
+  const item = navigation.getParam('item');
+  return [item.email];
+};
+
+DetailScreen.navigationOptions = () => {
+  headerMode: 'none';
 };
 
 export default DetailScreen;

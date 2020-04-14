@@ -1,12 +1,5 @@
-import {NavigationContainer} from '@react-navigation/native';
-import React from 'react';
+import {createAppContainer} from 'react-navigation';
 
 import BottomTab from './BottomTab';
 
-const AppContainer = () => (
-  <NavigationContainer>
-    <BottomTab />
-  </NavigationContainer>
-);
-
-export default AppContainer;
+export default createAppContainer(BottomTab);
