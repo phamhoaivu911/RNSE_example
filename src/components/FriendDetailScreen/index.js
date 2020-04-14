@@ -1,10 +1,12 @@
 import {Dimensions, Image, Text, TouchableOpacity, View} from 'react-native';
 import {SharedElement} from 'react-navigation-shared-element';
+import {useSafeArea} from 'react-native-safe-area-context';
 import React from 'react';
 
 const {width: deviceWidth} = Dimensions.get('window');
 
 const DetailScreen = ({route, navigation}) => {
+  const {top: topInsect} = useSafeArea();
   const {item} = route.params;
   return (
     <View>
@@ -22,7 +24,7 @@ const DetailScreen = ({route, navigation}) => {
         onPress={() => navigation.goBack()}
         style={{
           position: 'absolute',
-          top: 15,
+          top: topInsect,
           left: 15,
           width: 30,
           height: 30,
