@@ -12,11 +12,14 @@ const Item = item => {
     <TouchableOpacity
       onPress={() => navigate(FRIEND_DETAIL, {item})}
       style={{padding: 15}}>
-      <SharedElement id={item.email}>
+      <SharedElement id={`${item.email}.photo`}>
         <Image
           source={{uri: item.photo}}
           style={{width: 100, height: 100, resizeMode: 'cover'}}
         />
+      </SharedElement>
+      <SharedElement id={`${item.email}.content`}>
+        <Text>{item.name}</Text>
       </SharedElement>
     </TouchableOpacity>
   );

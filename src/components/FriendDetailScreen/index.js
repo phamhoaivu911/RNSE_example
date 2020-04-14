@@ -1,4 +1,11 @@
-import {Dimensions, Image, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {SharedElement} from 'react-navigation-shared-element';
 import {useSafeArea} from 'react-native-safe-area-context';
 import React from 'react';
@@ -9,17 +16,19 @@ const DetailScreen = ({route, navigation}) => {
   const {top: topInsect} = useSafeArea();
   const {item} = route.params;
   return (
-    <View>
-      <SharedElement id={item.email}>
+    <ScrollView>
+      <SharedElement id={`${item.email}.photo`}>
         <Image
           source={{uri: item.photo}}
           style={{width: deviceWidth, height: deviceWidth, resizeMode: 'cover'}}
         />
       </SharedElement>
-      <View style={{padding: 15}}>
-        <Text>{item.name}</Text>
-        <Text>{item.position}</Text>
-      </View>
+      <SharedElement id={`${item.email}.content`}>
+        <View style={{padding: 15}}>
+          <Text style={{fontSize: 30}}>{item.name}</Text>
+          <Text style={{fontSize: 22}}>{item.position}</Text>
+        </View>
+      </SharedElement>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
         style={{
@@ -35,7 +44,7 @@ const DetailScreen = ({route, navigation}) => {
         }}>
         <Text>X</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 
