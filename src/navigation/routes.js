@@ -1,3 +1,2 @@
-export const FRIENDS_BOTTOM_TAB = 'FRIENDS_BOTTOM_TAB';
-export const FRIENDS_LIST = 'FRIENDS_LIST';
-export const FRIEND_DETAIL = 'FRIEND_DETAIL';
+export const HOME_SCREEN = 'HOME_SCREEN';
+export const SEARCH_SCREEN = 'SEARCH_SCREEN';

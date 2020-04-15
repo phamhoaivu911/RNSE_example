@@ -1,11 +1,11 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 
-import FriendsStack from './FriendsStack';
+import AppStack from './AppStack';
 
 const AppContainer = () => (
   <NavigationContainer>
-    <FriendsStack />
+    <AppStack />
   </NavigationContainer>
 );
 
